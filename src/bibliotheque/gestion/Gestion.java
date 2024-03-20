@@ -157,6 +157,7 @@ public class Gestion {
         lex.add(ex);
         System.out.println("exemplaire créé");
         //TODO attribuer rayon
+
     }
 
     private void gestOuvrages() {
