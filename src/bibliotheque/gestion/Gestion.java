@@ -157,7 +157,8 @@ public class Gestion {
         lex.add(ex);
         System.out.println("exemplaire créé");
         //TODO attribuer rayon
-
+        System.out.println("Code rayon");
+        String codray= sc.nextLine();
     }
 
     private void gestOuvrages() {
