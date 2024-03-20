@@ -156,14 +156,14 @@ public class Gestion {
         Exemplaire ex = new Exemplaire(mat,etat,louv.get(choix-1));
         lex.add(ex);
         System.out.println("exemplaire créé");
-        //TODO attribuer rayon
+        //TODO attribuer rayons
         System.out.println("Code rayon");
         String codray= sc.nextLine();
     }
 
     private void gestOuvrages() {
         Ouvrage o = null;
-        System.out.println("titre");
+        System.out.println("titre" );
         String titre= sc.nextLine();
         System.out.println("age minimum");
         int ageMin= sc.nextInt();
