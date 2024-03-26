@@ -5,10 +5,7 @@ import bibliotheque.utilitaires.Utilitaire;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Gestion {
     Scanner sc = new Scanner(System.in);
@@ -170,7 +167,7 @@ public class Gestion {
         Exemplaire ex = new Exemplaire(mat, etat, louv.get(choix - 1));
         lex.add(ex);
         System.out.println("exemplaire créé");
-        //TODO attribuer rayon
+
         choix = Utilitaire.choixListe(lrayon);
         ex.setRayon(lrayon.get(choix - 1));
         System.out.println("exemplaire ajoute au rayon " + lrayon.get(choix - 1));
@@ -235,6 +232,7 @@ public class Gestion {
                         ((DVD) o).getAutresLangues().add(langues.get(choix - 1));
                         //TODO vérifier unicité ou utiliser set et pas de doublon avec langue d'origine
 
+
                     } while (true);
                     System.out.println("sous-titres");
                     do {
@@ -247,7 +245,7 @@ public class Gestion {
             }
             louv.add(o);
             System.out.println("ouvrage créé");
-            //TODO ajouter 1 auteur à la liste des auteurs
+
             choix=Utilitaire.choixListe(laut);
             o.addAuteur(laut.get(choix-1));
         }
