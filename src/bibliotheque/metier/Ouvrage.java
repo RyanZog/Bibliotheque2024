@@ -3,6 +3,7 @@ package bibliotheque.metier;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public abstract class Ouvrage {
     protected String titre;
@@ -144,5 +145,17 @@ public abstract class Ouvrage {
             if(ex.enLocation()==enLocation) lex2.add(ex);
         }
         return lex2;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Ouvrage ouvrage)) return false;
+        return Objects.equals(getLangue(), ouvrage.getLangue());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getLangue());
     }
 }

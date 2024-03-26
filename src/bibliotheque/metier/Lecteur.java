@@ -117,6 +117,11 @@ public class Lecteur {
 
     public List<Exemplaire> listerExemplairesEnLocation(){
         //TODO lister exemplaires en location lecteur
+        for(Location loc : lloc){
+            List<Exemplaire> lex2 = new ArrayList<>();
+
+
+        }
         return null;
     }
 
